@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: #23744b;
+  padding: 20px 6%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.header .first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.header .email {
+  cursor: pointer;
+}
+
+.header .email a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.header .email i {
+  font-size: 18px;
+}
+
+.header .time {
+  cursor: pointer;
+}
+
+.header .time a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.header .time i {
+  font-size: 18px;
+}
+
+.header select {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.header .social {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header .social p {
+  font-size: 18px;
+}
+
+.header .social i {
+  font-size: 20px;
+}
+
+.navbar-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 25px 10%;
+  background: #fff;
+  z-index: 1000;
+  transition: 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-container.scrolled {
+  background: #fff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.logo span {
+  font-weight: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.navbar-container.scrolled
+  .nav-menu
+  li
+  a
+  .navbar-container.scrolled
+  .nav-menu
+  .active {
+  color: #000 !important;
+}
+
+.nav-menu li a:hover,
+.nav-menu .active {
+  color: #23744b !important;
+}
+
+section {
+  padding: 0 10%;
+}
+
+.package-container {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.package-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.package-card {
+  border: 1px solid #e7ebee;
+  width: 300px;
+  padding: 50px 30px;
+  transition: .3s ease;
+}
+.package-card:hover {
+    border: 1px solid #23744b;
+    background-color: #f3f5f7;
+}
+
+.package-card h3 {
+    color: #23744b;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.price-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-list p {
+    font-size: 14px;
+    color: #848688;
+}
+
+.price-list .amount {
+    padding: 5px 10px;
+    background-color: #23744b;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.package-card .card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-btn button {
+    padding: 15px;
+    width: 80%;
+    border: 3px solid #23744b;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.card-btn button:hover {
+    color: #fff;
+    background: #23744b;
+}
+
+.footer {
+  height: 400px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.footer-contact {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact .contact-head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.footer-contact .contact-head img {
+  width: 25px;
+}
+
+.footer-contact .contact-head h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.footer-contact .contact-head h3 span {
+  font-weight: 800;
+}
+
+.footer-contact .contact-para p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #848688;
+  margin-bottom: 10px;
+}
+
+.footer-contact .contact-para a {
+  color: #000;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-contact .contact-para a:hover {
+  color: blue;
+}
+
+.footer-content .footer-links {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 30px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+}
+
+.footer-links .links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links .links a {
+  font-size: 14px;
+  color: #848688;
+  margin-bottom: 15px;
+}
+
+.footer-content .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.newsletter h3 {
+  font-size: 18px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  color: #848688;
+}
+
+.email-box {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.email-box input {
+  flex: 1;
+  padding: 20px 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.email-box button {
+  background: transparent;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.email-box button:hover {
+  color: #007bff;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  color: #848688;
+}

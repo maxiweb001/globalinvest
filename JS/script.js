@@ -23,9 +23,18 @@ const swiper = new Swiper(".mySwiper", {
     delay: 5000,
     disableOnInteraction: false,
   },
-  allowTouchMove: false,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  allowTouchMove: true,
 });
+
+
+const swiper2 = new Swiper(".mySwiper2", {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  allowTouchMove: true,
+});
+
