@@ -228,7 +228,7 @@ section {
 }
 
 .about-img img {
-  width: 580px;
+  width: 500px;
 }
 
 .home-about-text .global {
@@ -293,7 +293,7 @@ section {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .card {
