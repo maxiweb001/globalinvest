@@ -160,6 +160,13 @@ header {
   color: #23744b !important;
 }
 
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 section {
   padding: 0 10%;
 }

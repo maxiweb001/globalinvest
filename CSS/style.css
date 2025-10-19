@@ -10,7 +10,6 @@
 }
 
 header {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +101,7 @@ header {
 
 .navbar .logo {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -141,6 +141,13 @@ header {
 .nav-menu li a:hover,
 .nav-menu .active {
   color: #23744b;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 section {
@@ -198,7 +205,7 @@ section {
   color: #848688;
 }
 
-.home-text .home-btn {
+.home-btn button {
   width: 220px;
   font-size: 18px;
   font-weight: 600;
@@ -342,46 +349,38 @@ section {
   color: #000;
 }
 
-.testimonial {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.testimonial-container {
+  padding: 100px 10%;
   gap: 30px;
-  margin-bottom: 50px;
-  overflow: hidden;
 }
 
-.testimonial-text {
+.testimonial-head {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: left;
-  width: 100%;
+  margin-bottom: 50px;
 }
 
-.testimonial-text h3 {
+.testimonial-head p {
   font-size: 14px;
-  font-weight: 400;
+  color: #848688;
 }
 
-.testimonial-text h1 {
-  font-size: 48px;
+.testimonial-head h2 {
+  font-size: 40px;
   font-weight: 300;
-  margin-bottom: 30px;
 }
 
-.testimonial-text h1 span {
+.testimonial-head span {
   font-weight: 600;
   color: #23744b;
+  letter-spacing: 2px;
 }
 
 .swiper {
   width: 100%;
-}
-
-.swiper-wrapper {
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -389,81 +388,92 @@ section {
 
 .swiper-slide {
   position: relative;
-  width: 500px;
-  border: 1px solid #c0c1c2;
-  padding: 30px 50px;
+  height: 100%;
+  max-width: 515px;
+  border: 1px solid #e7e8e9;
+  padding: 20px;
   cursor: grab;
 }
 
-.swipe-overlay {
+.swiper-slide .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   border-top: 5px solid transparent;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
 }
 
-.swipe-overlay:hover {
+.swiper-slide .overlay:hover {
   border-top: 5px solid #23744b;
 }
 
-.slide-text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.swiper-slide i {
+  position: absolute;
+  right: 20px;
+  font-size: 35px;
+  color: #23744b;
 }
 
-.slide-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.swiper-slide h3 {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-.slide-head h3 {
-  font-size: 22px;
-  color: #2c724f;
+.swiper-slide h3 span {
+  color: #848688;
+  font-size: 12px;
+  font-weight: 300;
 }
 
-.slide-head i {
-  font-size: 34px;
-  color: #2c724f;
-}
-
-.slide-text p {
+.swiper-slide p {
   font-size: 14px;
   color: #848688;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  display: none !important;
+  line-height: 1.5;
 }
 
 .testimonial-bottom {
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
-.testimonial-bottom img {
+.testimonial-bottom h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #23744b;
+}
+
+.testimonial-bottom .swiper {
+  height: 100px;
+}
+
+.testimonial-bottom .swiper-slide {
+  max-width: 300px;
+  cursor: grab;
+  border: none;
+}
+
+.testimonial-bottom .swiper-slide img {
   filter: grayscale(100%);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease;
 }
 
-.testimonial-bottom img:hover {
-  filter: grayscale(0) brightness(80%);
+.testimonial-bottom .swiper-slide img:hover {
+  filter: grayscale(0);
 }
 
 .contact-container {
   min-width: 100%;
   background-color: #f8f6f7;
-  padding: 80px 100px;
+  padding: 80px 10%;
 }
 
 .contact-content {
+  width: 100%;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -471,7 +481,6 @@ section {
 }
 
 .contact-form {
-  width: 500px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -483,6 +492,7 @@ section {
 form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 form h3 {
@@ -780,6 +790,7 @@ form textarea {
   align-items: start;
   justify-content: space-between;
   padding: 100px 0;
+  gap: 20px;
 }
 
 .footer-contact {
@@ -860,6 +871,7 @@ form textarea {
 }
 
 .newsletter p {
+  width: 300px;
   font-size: 14px;
   color: #848688;
 }
@@ -900,4 +912,178 @@ form textarea {
 .footer .copyright {
   font-size: 14px;
   color: #848688;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .navbar-coantainer {
+    padding: 25px 5%;
+  }
+
+  .navbar .logo h3 {
+    font-size: 20px;
+  }
+
+  .navbar .logo span {
+    font-weight: 800;
+  }
+
+  .nav-menu li {
+    padding: 5px;
+  }
+
+  .nav-menu li a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    transition: 0.3s ease-in-out;
+  }
+
+  .home-text h1 {
+    color: #909497;
+  }
+
+  .home-about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+  }
+
+  .about-img img {
+    width: 600px;
+  }
+
+  .home-about-text .global {
+    text-align: center;
+  }
+
+  .home-about-text h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+  }
+
+  .home-about-text h1 span {
+    color: #23744b;
+    font-weight: 700;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-btn {
+    width: 100%;
+  }
+
+  .contact-text h4 {
+    text-align: center;
+  }
+
+  .contact-text h1 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .truck-img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .truck-img img {
+    display: block;
+    width: 100%;
+  }
+
+  .truck-text {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+.navbar{
+  width: 100%;
+}
+  .nav-menu li {
+    display: none;
+  }
+
+  .home-text {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .home-text p {
+    color: #909497;
+  }
+
+  .home-text .home-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .news-container {
+    flex-direction: column;
+  }
+
+  .news-secret {
+    display: flex;
+  }
+
+  .truck-text h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  
+  .first {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .about-img img {
+    width: 380px;
+  }
+
+  .image {
+    width: 200px;
+  }
+  .news-truck {
+    flex-direction: column;
+  }
+
+  .news-secret {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    align-content: center;
+    justify-content: left;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
 }

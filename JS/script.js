@@ -17,24 +17,70 @@ window.addEventListener("scroll", () => {
 // Initialize Swiper
 const swiper = new Swiper(".mySwiper", {
   loop: true,
-  slidesPerView: 2,
   spaceBetween: 30,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
   },
   allowTouchMove: true,
+  breakpoints: {
+    475: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.5,
+    },
+    1024: {
+      slidesPerView: 2,
+    },
+  },
 });
-
 
 const swiper2 = new Swiper(".mySwiper2", {
   loop: true,
-  slidesPerView: 5,
   spaceBetween: 30,
   autoplay: {
     delay: 7000,
     disableOnInteraction: false,
   },
   allowTouchMove: true,
+  breakpoints: {
+    500: {
+      slidesPerView: 3,
+    },
+    800: {
+      slidesPerView: 4
+    },
+    1024: {
+      slidesPerView: 5,
+    },
+  },
 });
 
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach((question) => {
+  question.addEventListener("click", () => {
+    // Close all others first (only one open at a time)
+    questions.forEach((item) => {
+      if (item !== question) {
+        item.classList.remove("active");
+        item.nextElementSibling.classList.remove("show");
+        item.querySelector(".faq-icon").textContent = "+";
+      }
+    });
+
+    // Toggle this one
+    question.classList.toggle("active");
+    const answer = question.nextElementSibling;
+    const icon = question.querySelector(".faq-icon");
+
+    if (question.classList.contains("active")) {
+      answer.classList.add("show");
+      icon.textContent = "−";
+    } else {
+      answer.classList.remove("show");
+      icon.textContent = "+";
+    }
+  });
+});
