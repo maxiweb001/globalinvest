@@ -189,8 +189,14 @@ section {
   gap: 20px;
 }
 
+.about-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-img img {
-  width: 500px;
+  width: 400px;
 }
 
 .home-about-text .global {
@@ -549,8 +555,12 @@ form textarea {
   height: 100px;
 }
 
+.testimonial-bottom .swiper-wrapper {
+  gap: 30px;
+}
+
 .testimonial-bottom .swiper-slide {
-  max-width: 300px;
+  width: 300px;
   cursor: grab;
   border: none;
 }
@@ -762,4 +772,57 @@ form textarea {
 .footer .copyright {
   font-size: 14px;
   color: #848688;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .navbar-coantainer {
+    padding: 25px 5%;
+  }
+
+  .navbar .logo h3 {
+    font-size: 18px;
+  }
+
+  .navbar .logo span {
+    font-weight: 800;
+  }
+
+
+  .nav-menu li a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    transition: 0.3s ease-in-out;
+  }
+
+  .home-about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-img {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-about-content {
+  margin-top: 250px;
+}
+
+header {
+  padding: 20px;
+}
+
+.contact-content {
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-btn {
+  width: 100%;
+}
 }

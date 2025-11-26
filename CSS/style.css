@@ -24,6 +24,7 @@ header {
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  gap: 10px;
 }
 
 .header .first {
@@ -143,11 +144,37 @@ header {
   color: #23744b;
 }
 
-/* Hamburger menu */
-.menu-toggle {
+.menu-icon {
   display: none;
-  font-size: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  height: 2.172rem;
+  width: 2.172rem;
+  border-radius: 50%;
+  padding: 4px;
   cursor: pointer;
+  z-index: 200;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon div {
+  display: block;
+  background: #23744b;
+  height: 2px;
+  width: 23px;
+  transition: 0.3s ease;
+}
+
+.move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+.move .line2 {
+  opacity: 0;
+}
+.move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
 }
 
 section {
@@ -1013,11 +1040,31 @@ form textarea {
     flex-direction: column;
     gap: 20px;
   }
-.navbar{
-  width: 100%;
-}
-  .nav-menu li {
-    display: none;
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 0.5s;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .menu-active {
+    right: 0;
+  }
+
+  .nav-menu li a {
+    color: #23744b;
   }
 
   .home-text {
@@ -1052,8 +1099,22 @@ form textarea {
   }
 }
 
+@media (max-width: 720px) {
+  .first {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .team-card {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 425px) {
-  
+  body {
+    width: 100%;
+  }
+
   .first {
     gap: 10px;
     flex-direction: column;
@@ -1068,6 +1129,10 @@ form textarea {
   }
   .news-truck {
     flex-direction: column;
+  }
+
+  .bank .truck-img {
+    order: 2;
   }
 
   .news-secret {

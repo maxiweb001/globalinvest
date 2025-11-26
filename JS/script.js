@@ -1,18 +1,16 @@
-const navbar = document.querySelector(".navbar-container");
+// Menu
+let menu = document.querySelector(".menu-icon");
+let navmenu = document.querySelector(".nav-menu");
 
-console.log("Navbar element found:", navbar); // Check if element exists
+menu.onclick = () => {
+  menu.classList.toggle("move");
+  navmenu.classList.toggle("menu-active");
+};
 
-window.addEventListener("scroll", () => {
-  console.log("Scroll Y:", window.scrollY); // Check scroll position
-
-  if (window.scrollY > 50) {
-    console.log("Adding scrolled class");
-    navbar.classList.add("scrolled");
-  } else {
-    console.log("Removing scrolled class");
-    navbar.classList.remove("scrolled");
-  }
-});
+window.onscroll = () => {
+  menu.classList.remove("move");
+  navmenu.classList.remove("menu-active");
+};
 
 // Initialize Swiper
 const swiper = new Swiper(".mySwiper", {
@@ -24,7 +22,7 @@ const swiper = new Swiper(".mySwiper", {
   },
   allowTouchMove: true,
   breakpoints: {
-    475: {
+    720: {
       slidesPerView: 1,
     },
     768: {
@@ -49,7 +47,7 @@ const swiper2 = new Swiper(".mySwiper2", {
       slidesPerView: 3,
     },
     800: {
-      slidesPerView: 4
+      slidesPerView: 4,
     },
     1024: {
       slidesPerView: 5,
