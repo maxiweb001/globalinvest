@@ -1036,6 +1036,9 @@ form textarea {
 }
 
 @media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
   .header {
     flex-direction: column;
     gap: 20px;
@@ -1046,6 +1049,7 @@ form textarea {
   }
 
   .nav-menu {
+    display: none;
     position: fixed;
     top: 0;
     right: -100%;
@@ -1060,7 +1064,7 @@ form textarea {
   }
 
   .menu-active {
-    right: 140px;
+    right: 0;
   }
 
   .nav-menu li a {
@@ -1127,12 +1131,18 @@ form textarea {
   .image {
     width: 200px;
   }
+
+  .menu-active {
+    right: 140px;
+  }
+
   .news-truck {
     flex-direction: column;
   }
 
-  .bank .truck-img {
-    order: 2;
+  #bank {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .news-secret {
